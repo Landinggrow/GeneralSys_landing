@@ -1,0 +1,47 @@
+<!-- ---
+const { post } = Astro.props;
+---
+<div class="overflow-hidden border-none shadow-lg transition-all duration-300 hover:shadow-xl">
+  <div class="relative h-48 w-full overflow-hidden">
+    <img 
+      src={post.coverImage} 
+      alt={post.title} 
+      class="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+    />
+    <div class="absolute top-4 right-4 rounded-full bg-[#2b8dcc] px-3 py-1 text-xs font-medium text-white">
+      {post.category}
+    </div>
+  </div>
+  <div class="p-6">
+    <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+      <div class="flex items-center gap-1">
+        <span>{post.date}</span>
+      </div>
+      <div class="flex items-center gap-1">
+        <span>{post.readTime} min de lectura</span>
+      </div>
+    </div>
+    <h3 class="mb-2 text-xl font-bold text-[#112f59] line-clamp-2">
+      {post.title}
+    </h3>
+    <p class="text-gray-600 line-clamp-3">
+      {post.excerpt}
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <div class="flex items-center justify-between w-full">
+      <div class="flex items-center gap-2">
+        <div class="relative h-8 w-8 overflow-hidden rounded-full">
+            <img
+            src={post.author?.avatar || "/image/logotipoGS.png"}
+            alt={`Avatar de ${post.author?.name || "autor"}`}
+            class="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+      <a href={`/blog/${post.id}`} class="border-[#2b8dcc] text-[#2b8dcc] hover:bg-[#2b8dcc]/10 px-4 py-2 border rounded">
+        Leer más
+      </a>
+    </div>
+  </div>
+</div> -->
