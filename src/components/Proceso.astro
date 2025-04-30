@@ -1,0 +1,78 @@
+---
+const steps = [
+  {
+    step: 1,
+    title: "Consultoría inicial",
+    description:
+      "Entendemos a fondo tus necesidades y objetivos de negocio para diseñar la solución ideal.",
+  },
+  {
+    step: 2,
+    title: "Diseño de soluciones personalizadas",
+    description:
+      "Creamos un plan detallado y arquitectura de software adaptada específicamente a tus requerimientos.",
+  },
+  {
+    step: 3,
+    title: "Desarrollo ágil y pruebas continuas",
+    description:
+      "Implementamos metodologías ágiles para un desarrollo eficiente con pruebas constantes que garantizan la calidad.",
+  },
+  {
+    step: 4,
+    title: "Implementación y capacitación",
+    description:
+      "Desplegamos la solución y capacitamos a tu equipo para aprovechar al máximo las nuevas herramientas.",
+  },
+  {
+    step: 5,
+    title: "Soporte y mantenimiento",
+    description:
+      "Ofrecemos soporte continuo y actualizaciones para mantener tu sistema funcionando de manera óptima.",
+  },
+];
+---
+
+<section id="Proceso" class="py-12 md:py-16 bg-[#112f59] scroll-mt-12">
+  <div class="container px-4 md:px-6 mx-auto">
+    <!-- Header Section -->
+    <div
+      class="flex flex-col items-center justify-center space-y-4 text-center"
+    >
+      <div class="space-y-2">
+        <h2
+          class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white"
+        >
+          Nuestro Proceso
+        </h2>
+        <p
+          class="mx-auto max-w-[700px] text-white/80 md:text-xl leading-relaxed"
+        >
+          Nuestro proceso está diseñado para garantizar el éxito de tu proyecto:
+        </p>
+      </div>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="mx-auto max-w-4xl mt-12">
+      <div class="space-y-8">
+        {
+          steps.map((step) => (
+            <div class="flex">
+              <div class="flex flex-col items-center mr-4">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#112f59]">
+                  {step.step}
+                </div>
+                {step.step !== 5 && <div class="h-full w-0.5 bg-white/70" />}
+              </div>
+              <div class="pt-1 pb-8">
+                <h3 class="text-xl font-bold text-white">{step.title}</h3>
+                <p class="text-white/80 mt-2">{step.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

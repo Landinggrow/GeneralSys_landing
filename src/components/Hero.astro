@@ -1,5 +1,11 @@
 ---
+// Importa el componente del icono
+import IconMoveRight from "./icon/IconMoveRight.astro";
+
+// Año actual
 const year = new Date().getFullYear();
+
+// Logos de empresas
 const companyLogos = [
   { name: "Girasol", src: "/image/LogoGirasol.png", alt: "Girasol Logo" },
   { name: "SacsMype", src: "/image/LogoSacs.png", alt: "SacsMype Logo" },
@@ -8,7 +14,7 @@ const companyLogos = [
 ---
 
 <section
-  id="inicio"
+  id="Inicio"
   class="relative overflow-hidden bg-gradient-to-br from-[#f8f9fa] to-[#e9f6ff] py-20 md:py-28 mt-20"
 >
   <!-- Background Elements -->
@@ -71,6 +77,7 @@ const companyLogos = [
             class="bg-[#112f59] hover:bg-[#0a1c36] text-white px-8 py-6 text-lg rounded-lg shadow-lg flex items-center gap-2"
           >
             Solicita tu diagnóstico
+            <IconMoveRight />
           </a>
           <a
             href="#"
@@ -102,15 +109,15 @@ const companyLogos = [
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <div class="h-3 w-3 rounded-full bg-green-500"></div>
-              <span class="text-sm font-medium text-[#112f59]"
-                >100% Personalizado</span
-              >
+              <span class="text-sm font-medium text-[#112f59]">
+                100% Personalizado
+              </span>
             </div>
             <div class="flex items-center gap-2">
               <div class="h-3 w-3 rounded-full bg-[#2b8dcc]"></div>
-              <span class="text-sm font-medium text-[#112f59]"
-                >Soporte Continuo</span
-              >
+              <span class="text-sm font-medium text-[#112f59]">
+                Soporte Continuo
+              </span>
             </div>
           </div>
         </div>
