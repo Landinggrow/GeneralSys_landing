@@ -1,23 +1,52 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import BlogComponente from '../components/blog/blogcomponente.astro';
+import BlogComponente from "../components/blog/blogcomponente.astro";
 ---
 
 <Layout>
+  <section
+    class="py-12 md:py-20 bg-gradient-to-br from-[#f8f9fa] to-[#e9f6ff] mt-20"
+  >
+    <div class="container mx-auto px-4 md:px-6">
+      <div
+        class="flex flex-col items-center justify-center space-y-4 text-center"
+      >
+        <div
+          class="inline-flex items-center gap-2 rounded-full bg-[#112f59] px-4 py-1.5 text-sm font-medium text-white"
+        >
+          <span class="relative flex h-2 w-2">
+            <span
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2b8dcc] opacity-75"
+            ></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-[#2b8dcc]"
+            ></span>
+          </span>
+          Conocimiento Tecnológico
+        </div>
+        <h1
+          class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-[#112f59]"
+        >
+          Blog de Tecnología y <span class="text-[#2b8dcc]"
+            >Soluciones Empresariales</span
+          >
+        </h1>
+        <p
+          class="mx-auto max-w-[700px] text-gray-600 md:text-xl leading-relaxed"
+        >
+          Descubre cómo la tecnología puede transformar tu empresa. Casos de
+          éxito, tendencias y consejos prácticos.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="py-12 mt-20">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold text-center mb-8">Blog</h1>
-      <p class="text-center text-gray-600 mb-12">Artículos y novedades.</p>
       <BlogComponente />
     </div>
   </section>
 </Layout>
-
-
-
-
-
 
 <!-- ---
 import { getCollection } from "astro:content";

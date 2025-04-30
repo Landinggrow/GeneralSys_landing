@@ -1,4 +1,76 @@
 ---
+// Definición de las propiedades del componente
+interface BlogCardProps {
+  title: string;
+  date: string;
+  summary: string;
+  url: string;
+}
+
+const { title, date, summary, url } = Astro.props as BlogCardProps;
+---
+
+<div
+  class="overflow-hidden border-none shadow-lg transition-all duration-300 hover:shadow-xl"
+>
+  <!-- Imagen y Categoría -->
+  <div class="relative h-48 w-full overflow-hidden">
+    <img
+      src="/placeholder.svg"
+      alt="Imagen del blog"
+      class="object-cover transition-transform duration-500 hover:scale-105"
+    />
+    <div
+      class="absolute top-4 right-4 rounded-full bg-[#2b8dcc] px-3 py-1 text-xs font-medium text-white"
+    >
+      Categoría <!-- Categoría estática -->
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+  <div class="p-6">
+    <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+      <div class="flex items-center gap-1">
+        <svg class="h-4 w-4"><use href="#calendar-icon"></use></svg>
+        <span>{date}</span>
+        <!-- Fecha dinámica -->
+      </div>
+      <div class="flex items-center gap-1">
+        <svg class="h-4 w-4"><use href="#clock-icon"></use></svg>
+        <span>5 min de lectura</span>
+        <!-- Tiempo de lectura estático -->
+      </div>
+    </div>
+    <h3 class="mb-2 text-xl font-bold text-[#112f59] line-clamp-2">{title}</h3>
+    <!-- Título dinámico -->
+    <p class="text-gray-600 line-clamp-3">{summary}</p>
+    <!-- Resumen dinámico -->
+  </div>
+
+  <!-- Pie de Tarjeta -->
+  <div class="p-6 pt-0">
+    <div class="flex items-center justify-between w-full">
+      <div class="flex items-center gap-2">
+        <div class="relative h-8 w-8 overflow-hidden rounded-full">
+          <img
+            src="/image/logotipoGS.png"
+            alt="Autor del blog"
+            class="object-cover"
+          />
+        </div>
+        <!-- Nombre estático -->
+      </div>
+      <a
+        href={url}
+        class="border-[#2b8dcc] text-[#2b8dcc] hover:bg-[#2b8dcc]/10 px-3 py-1 rounded-md"
+      >
+        Leer más
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ---
 interface BlogCardProps {
   title: string;
   date: string;
@@ -15,4 +87,4 @@ const { title, date, summary, url } = Astro.props as BlogCardProps;
     <h3 class="text-lg font-semibold text-gray-800 mb-2">{title}</h3>
     <p class="text-gray-600 text-sm">{summary}</p>
   </a>
-</div>
+</div> -->
