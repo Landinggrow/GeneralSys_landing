@@ -1,0 +1,52 @@
+---
+const year = new Date().getFullYear();
+
+const footerLinks = [
+  { name: "Inicio", link: "/" },
+  { name: "Servicio", link: "#Servicio" },
+  { name: "Nosotros", link: "#Nosotros" },
+  { name: "Soluciones", link: "#Soluciones" },
+  { name: "Proceso", link: "#Proceso" },
+  { name: "Testimonio", link: "#Testimonio" },
+];
+---
+
+<footer class="border-t bg-[#fafafa]">
+  <div
+    class="container mx-auto flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between md:py-12"
+  >
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-2">
+        <img
+          src="/image/logotipoGS.png"
+          alt="General System  Logo"
+          width="55"
+          height="55"
+        />
+        <span class="text-3xl font-bold text-[#112f59]">General System</span>
+      </div>
+      <p class="text-sm text-gray-500 font-medium">
+        Soluciones de software a medida para impulsar tu negocio.
+      </p>
+    </div>
+    <div class="flex flex-col gap-2 md:flex-row md:gap-4">
+      {
+        footerLinks.map((item) => (
+          <a
+            href={item.link}
+            class="text-xl text-gray-500 hover:text-[#2b8dcc] font-medium"
+          >
+            {item.name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class="flex justify-center items-center gap-4 border-t border-[#bbbaba] mt-5 py-5"
+  >
+    <p class="text-sm text-gray-500">
+      © {year} General System. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>

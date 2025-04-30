@@ -1,0 +1,172 @@
+---
+// Importa el componente del icono
+import IconCheck from "../components/icon/Iconchek.astro";
+import IconHead from "../components/icon/IconHeadset.astro";
+import IconSeting from "../components/icon/Iconsettings.astro";
+import IconChev from "../components/icon/Iconchevrons-left-right.astro";
+import IconcircleCheck from "./icon/Iconcircle-check.astro";
+import Iconusers from "./icon/Iconusers-round.astro"
+import IconMoveRight from "./icon/IconMoveRight.astro"
+
+const stats = [
+  {
+    value: "98%",
+    label: "Clientes Satisfechos",
+    
+  },
+  {
+    value: "+200",
+    label: "Proyectos Completados",
+    
+  },
+  {
+    value: "+40%",
+    label: "Aumento de Eficiencia",
+    
+  },
+];
+
+const features = [
+  {
+    icon: IconCheck,
+    title: "Rapidez",
+    description:
+      "Entregamos soluciones con rapidez, sin comprometer la calidad ni la atención al detalle.",
+  },
+  {
+    icon: IconHead,
+    title: "Soporte",
+    description:
+      "Ofrecemos soporte dedicado y personalizado para garantizar el éxito de tu proyecto.",
+  },
+  {
+    icon: IconSeting,
+    title: "Adaptabilidad",
+    description:
+      "Creamos soluciones que se adaptan perfectamente a las necesidades específicas de tu empresa.",
+  },
+  {
+    icon: IconChev,
+    title: "Innovación",
+    description:
+      "Incorporamos las últimas tecnologías para mantener tu negocio a la vanguardia del mercado.",
+  },
+];
+
+const benefits = [
+  {
+    icon: IconcircleCheck,
+    title: "Soluciones 100% personalizadas",
+    description: "Adaptadas a tus necesidades específicas.",
+  },
+  {
+    icon: Iconusers ,
+    title: "Equipo altamente calificado",
+    description: "Profesionales con amplia experiencia.",
+  },
+  {
+    icon: IconMoveRight,
+    title: "Tecnologías de vanguardia",
+    description: "Utilizamos las herramientas más avanzadas.",
+  },
+];
+---
+
+<section class="py-16 md:py-24 relative overflow-hidden">
+  <!-- Background Elements -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-[#f8f9fa] to-[#e9f6ff] opacity-50 z-0"
+  >
+  </div>
+  <div
+    class="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-[#2b8dcc]/10 z-0"
+  >
+  </div>
+  <div
+    class="absolute top-1/3 -left-24 h-64 w-64 rounded-full bg-[#112f59]/5 z-0"
+  >
+  </div>
+
+  <div class="container px-4 md:px-6 mx-auto relative z-10">
+    <!-- Header Section -->
+    <div
+      class="flex flex-col items-center justify-center space-y-4 text-center mb-16"
+    >
+      <h2
+        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#112f59]"
+      >
+        <span class="text-[#2b8dcc]">Nosotros</span>
+      </h2>
+      <p class="mx-auto max-w-[700px] text-gray-600 md:text-xl leading-relaxed">
+        En General System SAS, combinamos experiencia e innovación para ofrecer
+        soluciones de software que transforman negocios.
+      </p>
+    </div>
+
+    <!-- Features and Benefits Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+      <!-- Feature Cards (Left) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {features.map((feature) => (
+          <div class="bg-white shadow-lg rounded-2xl overflow-hidden p-6 flex flex-col items-center text-center transition transform hover:scale-105">
+            <div class="h-2 w-full bg-[#2b8dcc]" />
+            <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#2b8dcc]/10 text-[#2b8dcc]">
+              <feature.icon /> <!-- Renderiza el componente del icono -->
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-[#112f59]">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Benefits Box (Right) -->
+      <div class="flex flex-col justify-center">
+        <div
+          class="bg-gradient-to-br from-[#112f59] to-[#1a4580] rounded-2xl p-6 md:p-8 lg:p-12 shadow-xl relative overflow-hidden w-full max-w-4xl"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+            Beneficios que nos distinguen
+          </h3>
+          <div class="space-y-6">
+            {benefits.slice(0, 3).map((benefit) => ( // Limita a los primeros 3 elementos
+              <div class="flex items-center gap-4">
+                <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-[#2b8dcc] flex items-center justify-center text-white shadow-lg">
+                  <benefit.icon /> <!-- Renderiza el componente del icono -->
+                </div>
+                <div>
+                  <h4 class="text-white font-semibold text-lg md:text-xl lg:text-2xl">
+                    {benefit.title}
+                  </h4>
+                  <p class="text-white/80 text-sm md:text-base lg:text-lg">
+                    {benefit.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+    
+          <div class="mt-8 text-center">
+            <a
+              href="#"
+              class="bg-white text-[#112f59] hover:bg-[#f0f0f0] px-6 py-3 rounded-lg font-medium text-sm md:text-base"
+            >
+              Conoce más sobre nosotros
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Stats Section -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {stats.map((stat) => (
+          <div class="bg-white rounded-xl p-6 shadow-lg text-center transform transition-transform hover:scale-105">
+            <div class="text-4xl font-bold text-[#2b8dcc] mb-2">
+              {stat.value}
+            </div>
+            <div class="text-xl font-semibold text-[#112f59]">{stat.label}</div>
+            
+          </div>
+        ))}
+      </div>
+  </div>
+</section>
