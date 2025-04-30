@@ -21,6 +21,7 @@ console.log("Posts obtenidos:", posts);
           date={post.data.date.toString()}
           summary={post.data.resume}
           url={`/blog/${post.id.replace(/\.md$/, "")}`}
+          category={post.data.category}
         />
       ))}
     </div>

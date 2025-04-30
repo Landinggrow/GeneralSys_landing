@@ -1,13 +1,16 @@
 ---
+import IconCalendar from "../icon/IconCalendar.astro";
+import IconClock from "../icon/IconClock.astro";
 // Definición de las propiedades del componente
 interface BlogCardProps {
   title: string;
   date: string;
   summary: string;
   url: string;
+  category: string;
 }
 
-const { title, date, summary, url } = Astro.props as BlogCardProps;
+const { title, date, summary, url, category } = Astro.props as BlogCardProps;
 ---
 
 <div
@@ -23,26 +26,34 @@ const { title, date, summary, url } = Astro.props as BlogCardProps;
     <div
       class="absolute top-4 right-4 rounded-full bg-[#2b8dcc] px-3 py-1 text-xs font-medium text-white"
     >
-      Categoría <!-- Categoría estática -->
+      {category}
+      <!-- Categoría estática -->
     </div>
   </div>
 
   <!-- Contenido Principal -->
   <div class="p-6">
     <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+      <!-- Fecha -->
       <div class="flex items-center gap-1">
-        <svg class="h-4 w-4"><use href="#calendar-icon"></use></svg>
+        <IconCalendar />
         <span>{date}</span>
         <!-- Fecha dinámica -->
       </div>
+
+      <!-- Tiempo de lectura -->
       <div class="flex items-center gap-1">
-        <svg class="h-4 w-4"><use href="#clock-icon"></use></svg>
+        <IconClock />
         <span>5 min de lectura</span>
         <!-- Tiempo de lectura estático -->
       </div>
     </div>
+
+    <!-- Título -->
     <h3 class="mb-2 text-xl font-bold text-[#112f59] line-clamp-2">{title}</h3>
     <!-- Título dinámico -->
+
+    <!-- Resumen -->
     <p class="text-gray-600 line-clamp-3">{summary}</p>
     <!-- Resumen dinámico -->
   </div>
