@@ -22,6 +22,7 @@ console.log("Posts obtenidos:", posts);
           summary={post.data.resume}
           url={`/blog/${post.id.replace(/\.md$/, "")}`}
           category={post.data.category}
+          coverImage={post.data.coverImage}
         />
       ))}
     </div>

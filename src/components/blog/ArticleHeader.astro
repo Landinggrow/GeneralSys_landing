@@ -10,7 +10,15 @@ const { title, date, resume } = Astro.props;
 
 <div class="article-header">
   <h1 class="article-title">{title}</h1>
-  <p class="article-date">{new Date(date).toLocaleDateString('es-PE', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+  <p class="article-date">
+    {
+      new Date(date).toLocaleDateString("es-PE", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    }
+  </p>
   <p class="article-resume">{resume}</p>
 </div>
 
@@ -18,8 +26,8 @@ const { title, date, resume } = Astro.props;
   .article-header {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: #FDFCF7; /* Fondo secundario */
-    border-bottom: 4px solid #E49542; /* Línea de énfasis */
+    background-color: #fdfcf7; /* Fondo secundario */
+    border-bottom: 4px solid #1bacff; /* Línea de énfasis */
     border-radius: 8px;
     margin-bottom: 2rem;
   }
@@ -27,7 +35,7 @@ const { title, date, resume } = Astro.props;
   .article-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2B2B2B; /* Color para resaltar textos */
+    color: #2b2b2b; /* Color para resaltar textos */
     margin-bottom: 0.5rem;
   }
 
@@ -39,7 +47,7 @@ const { title, date, resume } = Astro.props;
 
   .article-resume {
     font-size: 1.25rem;
-    color: #5B2C6F; /* Color destacado */
+    color: #5b2c6f; /* Color destacado */
     font-style: italic;
   }
 

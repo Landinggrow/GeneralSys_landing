@@ -8,9 +8,11 @@ interface BlogCardProps {
   summary: string;
   url: string;
   category: string;
+  coverImage: string;
 }
 
-const { title, date, summary, url, category } = Astro.props as BlogCardProps;
+const { title, date, summary, url, category, coverImage } =
+  Astro.props as BlogCardProps;
 ---
 
 <div
@@ -19,7 +21,7 @@ const { title, date, summary, url, category } = Astro.props as BlogCardProps;
   <!-- Imagen y Categoría -->
   <div class="relative h-48 w-full overflow-hidden">
     <img
-      src="/placeholder.svg"
+      src={coverImage}
       alt="Imagen del blog"
       class="object-cover transition-transform duration-500 hover:scale-105"
     />

@@ -6,6 +6,7 @@ const blogContenidoCollection = defineCollection({
     date: z.string(),
     resume: z.string(),
     category: z.string(),
+    coverImage: z.string(),
   }),
 });
 

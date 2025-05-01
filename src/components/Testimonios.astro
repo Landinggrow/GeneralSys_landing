@@ -1,25 +1,39 @@
 ---
 const testimonials = [
   {
-    name: "Carlos Rodríguez",
-    role: "Director de Operaciones, TechCorp",
-    avatar: "/placeholder.svg?height=40&width=40",
+    name: "Real Hotel",
+    // role: "Gerente, Real Hotel",
+    avatar: "/image/ElipceRealHotel.png",
     feedback:
       "General System SAS transformó nuestros procesos internos con un software a medida que aumentó nuestra eficiencia en un 40%. Su equipo es altamente profesional y comprometido.",
   },
   {
-    name: "Laura Martínez",
-    role: "CEO, Innovatech",
-    avatar: "/placeholder.svg?height=40&width=40",
+    name: "Atachagua",
+    // role: "Gerente, Atachagua",
+    avatar: "/image/EllipseAtachaua.png",
     feedback:
-      "La integración de sistemas que implementaron nos permitió centralizar toda nuestra información y tomar decisiones más informadas. El ROI superó nuestras expectativas.",
+      "La integración de sistemas que implementaron nos permitió centralizar toda nuestra información y tomar decisiones más informadas.",
   },
   {
-    name: "Miguel Sánchez",
-    role: "CTO, DataSolutions",
-    avatar: "/placeholder.svg?height=40&width=40",
+    name: "Las Rocas",
+    // role: "CTO, DataSolutions",
+    avatar: "/image/EllipseLasRocas.png",
     feedback:
       "Su consultoría tecnológica nos ayudó a identificar oportunidades de mejora que no habíamos considerado. Ahora tenemos una hoja de ruta clara para nuestra transformación digital.",
+  },
+  {
+    name: "Yunga Cementos",
+    // role: "Gerente de Producción",
+    avatar: "/image/EllipseYunga.png",
+    feedback:
+      "Gracias al sistema desarrollado a medida, hemos optimizado la trazabilidad de nuestros procesos de producción y logística. La solución se adaptó perfectamente a nuestras operaciones industriales.",
+  },
+  {
+    name: "Atachagua",
+    // role: "Jefa de Operaciones",
+    avatar: "/image/EllipseAtachagua.png",
+    feedback:
+      "Con la solución implementada por General System, ahora gestionamos pedidos, inventario y distribución en tiempo real. Su equipo entendió nuestras necesidades desde el primer día.",
   },
 ];
 ---
@@ -66,7 +80,7 @@ const testimonials = [
                   <h4 class="text-lg font-semibold text-[#112f59]">
                     {testimonial.name}
                   </h4>
-                  <p class="text-sm text-gray-500">{testimonial.role}</p>
+                  {/* <p class="text-sm text-gray-500">{testimonial.role}</p> */}
                 </div>
               </div>
               <p class="text-gray-600">{testimonial.feedback}</p>
