@@ -7,25 +7,70 @@ const year = new Date().getFullYear();
 
 // Logos de empresas
 const companyLogos = [
-  { name: "Girasol", src: "/image/LogoGirasol.png", alt: "Girasol Logo" },
-  { name: "SacsMype", src: "/image/LogoSacs.png", alt: "SacsMype Logo" },
-  { name: "FirmEasy", src: "/image/LogoFirm.png", alt: "FirmEasy Logo" },
-  { name: "LogoAguas", src: "/image/LogoAguas.png", alt: "FirmEasy Logo" },
   {
-    name: "LogoAtachagua",
-    src: "/image/LogoAtachagua.png",
+    name: "Girasol",
+    src: "/image/LogoEmpresas/LogoGirasol.png",
+    alt: "Girasol Logo",
+  },
+  {
+    name: "SacsMype",
+    src: "/image/LogoEmpresas/LogoSacs.png",
+    alt: "SacsMype Logo",
+  },
+  {
+    name: "FirmEasy",
+    src: "/image/LogoEmpresas/LogoFirm.png",
     alt: "FirmEasy Logo",
   },
   {
-    name: "LogoAtachaguaSel",
-    src: "/image/LogoAtachaguaselva.png",
+    name: "Las Rocas",
+    src: "/image/LogoEmpresas/LogoAguas.png",
     alt: "FirmEasy Logo",
   },
-  { name: "LogoYunga", src: "/image/LogoYunga.png", alt: "FirmEasy Logo" },
   {
-    name: "LogoRealHotel",
-    src: "/image/LogoRealHotel.png",
-    alt: "FirmEasy Logo",
+    name: "Atachagua",
+    src: "/image/LogoEmpresas/LogoAtachagua.png",
+    alt: "Atachagua Logo",
+  },
+  {
+    name: "Atachagua selva",
+    src: "/image/LogoEmpresas/LogoAtachaguaselva.png",
+    alt: "Atachagua Selva Logo",
+  },
+  {
+    name: "Cemento Yunga",
+    src: "/image/LogoEmpresas/LogoYunga.png",
+    alt: "Yunga Logo",
+  },
+  {
+    name: "RealHotel",
+    src: "/image/LogoEmpresas/LogoRealHotel.png",
+    alt: "RealHotel Logo",
+  },
+  {
+    name: "Hotel Calicanto",
+    src: "/image/LogoEmpresas/LogoHotelCalicanto.svg",
+    alt: "HotelCalicanto Logo",
+  },
+  {
+    name: "El Vallecito Nido",
+    src: "/image/LogoEmpresas/LogoVallecito.svg",
+    alt: "VallecitoNido Logo",
+  },
+  {
+    name: "San Vicente de la Barquera",
+    src: "/image/LogoEmpresas/LogoBarquera.svg",
+    alt: "Barquera Logo",
+  },
+  {
+    name: "Clinica San Gabriel",
+    src: "/image/LogoEmpresas/LogoSanGabriel.svg",
+    alt: "SanGabriel Logo",
+  },
+  {
+    name: "WG distribuciones",
+    src: "/image/LogoEmpresas/LogoWG.svg",
+    alt: "WG Logo",
   },
 ];
 ---
@@ -155,6 +200,7 @@ const companyLogos = [
               <img
                 src={logo.src}
                 alt={logo.alt}
+                title={logo.name}
                 class="h-12 w-auto object-contain"
               />
             </div>
