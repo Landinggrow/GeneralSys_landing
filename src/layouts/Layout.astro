@@ -7,27 +7,69 @@ import "../styles/global.css";
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>General System</title>
+    <title>
+      General System - Desarrollo de Software a Medida | Soluciones
+      Empresariales
+    </title>
+    <meta
+      name="description"
+      content="Desarrollamos software personalizado para empresas: gestión, operación, productividad. Soluciones tecnológicas a medida para optimizar tu negocio."
+    />
 
-    <!-- Open Graph -->
     <meta
       property="og:title"
-      content="General System SAS - Software a medida para empresas que exigen más."
+      content="General System - Desarrollo de Software a Medida | Soluciones Empresariales"
     />
     <meta
       property="og:description"
-      content="Desarrollamos soluciones de software personalizadas para pymes y grandes empresas. Rápido, confiable y adaptado a tus necesidades."
+      content="Desarrollamos software personalizado para empresas: gestión, operación, productividad. Soluciones tecnológicas a medida para optimizar tu negocio."
     />
-    <meta property="og:image" content="/images/LogoHero.png" />
-    <meta property="og:url" content="https://www.generalsystem.com.pe/" />
+    <meta property="og:image" content="/image/LogoHero.png" />
+    <meta property="og:url" content="https://generalsystem.com/" />
     <meta property="og:type" content="website" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://www.generalsystem.com.pe/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="General System - Desarrollo de Software a Medida | Soluciones Empresariales"
+    />
+    <meta
+      name="twitter:description"
+      content="Desarrollamos software personalizado para empresas: gestión, operación, productividad. Soluciones tecnológicas a medida para optimizar tu negocio."
+    />
+    <meta property="twitter:image" content="/image/LogoHero.png" />
+
+    <link rel="canonical" href="https://generalsystem.com/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "General System",
+        "url": "https://generalsystem.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{search_url}?q={search_term}",
+          "query-input": "required name=search_term"
+        }
+      }
+    </script>
+
+    <link
+      rel="icon"
+      media="(prefers-color-scheme: light)"
+      type="image/svg+xml"
+      href="/favicon1.svg"
+    />
+    <link
+      rel="icon"
+      media="(prefers-color-scheme: dark)"
+      type="image/svg+xml"
+      href="/favicon2.svg"
+    />
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <NavBar />
