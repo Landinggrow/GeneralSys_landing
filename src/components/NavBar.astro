@@ -31,63 +31,74 @@ const menuItems = [
 
     <!-- Botón de acción -->
     <div class="flex lg:order-2 rtl:space-x-reverse">
+  <a
+    target="_blank"
+    rel="noopener noreferrer"
+    href="https://wa.me/51935289770?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20soluciones%20de%20software%20que%20ofrece%20General%20System%20para%20mi%20empresa.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F."
+    class="main-contact-btn bg-[#2b8dcc] rounded-[12px] hover:bg-[#2179b3] text-white hover:text-white text-lg md:px-6 md:py-3 px-2 py-3 h-auto font-medium md:text-[18px] text-[14px] transition-all duration-300 shadow-lg hover:shadow-xl"
+  >
+    <span class="hidden md:inline">Contactar</span>
+    <span class="inline md:hidden">Inicia hoy</span>
+  </a>
+      <!-- Menú hamburguesa para pantallas pequeñas -->
+      <button
+    data-collapse-toggle="navbar-sticky"
+    type="button"
+    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+    aria-controls="navbar-sticky"
+    aria-expanded="false"
+  >
+    <span class="sr-only">Abrir el menú</span>
+    <svg
+      class="w-5 h-5"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 17 14"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 1h15M1 7h15M1 13h15"></path>
+    </svg>
+  </button>
+</div>
+
+    <!-- Menú de navegación -->
+    <div
+  class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+  id="navbar-sticky"
+>
+  <ul
+    class="flex navbar-items md:gap-5 p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-[#FAFAFA] lg:mt-0 lg:border-0 lg:bg-transparent"
+  >
+    {
+      menuItems.map((item) => (
+        <li>
+          <a
+            href={item.link}
+            class="block py-2 px-0.5 text-[#1F3B4D] xl:text-[18px] text-[13px] font-medium rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#65AFFF] lg:p-0"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+    <!-- Botón "Inicia hoy" solo visible en <=341px dentro del menú -->
+    <li class="block menu-contact-btn-li">
       <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://wa.me/51935289770?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20soluciones%20de%20software%20que%20ofrece%20General%20System%20para%20mi%20empresa.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F."
-         class="bg-[#2b8dcc] rounded-[12px] hover:bg-[#2179b3] text-white hover:text-white text-lg md:px-6 md:py-3 px-2 py-3 h-auto font-medium md:text-[18px] text-[14px] transition-all duration-300 shadow-lg hover:shadow-xl"
+        class="menu-contact-btn bg-[#2b8dcc] rounded-[12px] hover:bg-[#2179b3] text-white hover:text-white text-lg px-4 py-2 h-auto font-medium text-[14px] transition-all duration-300 shadow-lg hover:shadow-xl w-full text-center"
       >
-        <span class="hidden md:inline">Contactar</span>
-        <span class="inline md:hidden">Inicia hoy</span>
+        Inicia hoy
       </a>
-      <!-- Menú hamburguesa para pantallas pequeñas -->
-      <button
-        data-collapse-toggle="navbar-sticky"
-        type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-        aria-controls="navbar-sticky"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Abrir el menú</span>
-        <svg
-          class="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15"></path>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Menú de navegación -->
-    <div
-      class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
-      id="navbar-sticky"
-    >
-      <ul
-        class="flex navbar-items md:gap-5 p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-[#FAFAFA] lg:mt-0 lg:border-0 lg:bg-transparent"
-      >
-        {
-          menuItems.map((item) => (
-            <li>
-              <a
-                href={item.link}
-                class="block py-2 px-0.5 text-[#1F3B4D] xl:text-[18px] text-[13px] font-medium rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-[#65AFFF] lg:p-0"
-              >
-                {item.name}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+    </li>
+  </ul>
+</div>
   </div>
 </nav>
 
@@ -100,6 +111,22 @@ const menuItems = [
   @media (max-width: 1023px) {
     .navbar-items {
       flex-direction: column;
+    }
+  }
+
+  /* Oculta el botón principal en <=341px */
+  @media (max-width: 341px) {
+    .main-contact-btn {
+      display: none !important;
+    }
+    .menu-contact-btn-li {
+      display: block !important;
+    }
+  }
+  /* Oculta el botón del menú en >341px */
+  @media (min-width: 342px) {
+    .menu-contact-btn-li {
+      display: none !important;
     }
   }
 </style>

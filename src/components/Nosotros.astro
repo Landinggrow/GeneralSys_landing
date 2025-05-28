@@ -147,13 +147,14 @@ const benefits = [
     
           <div class="mt-8 text-center">
             <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://wa.me/51935289770?  text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20soluciones%20de%20software%20que%20ofrece%20General%20System%20para%20mi%20empresa.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F."
-              class="bg-white text-[#112f59] hover:bg-[#f0f0f0] px-6 py-3 rounded-lg font-medium text-sm md:text-base"
-            >
-              Conoce más sobre nosotros
-            </a>
+  target="_blank"
+  rel="noopener noreferrer"
+  href="https://wa.me/51935289770?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20las%20soluciones%20de%20software%20que%20ofrece%20General%20System%20para%20mi%20empresa.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F."
+  class="bg-white text-[#112f59] hover:bg-[#f0f0f0] px-6 py-3 rounded-lg font-medium text-sm md:text-base"
+>
+  <span class="btn-text-normal">Conoce más sobre nosotros</span>
+  <span class="btn-text-short">Conoce más</span>
+</a>
           </div>
         </div>
       </div>
@@ -172,3 +173,18 @@ const benefits = [
       </div>
   </div>
 </section>
+
+<style>
+  /* ...existing styles... */
+  .btn-text-short {
+    display: none;
+  }
+  @media (max-width: 327px) {
+    .btn-text-normal {
+      display: none;
+    }
+    .btn-text-short {
+      display: inline;
+    }
+  }
+</style>
