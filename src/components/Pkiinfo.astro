@@ -1,0 +1,164 @@
+---
+const pkiPoints = [
+  {
+    title: "Autoridad de Certificación (CA): Su Emisor de Identidades Digitales Confiables",
+    description: [
+      "Como su Autoridad de Certificación, nos convertimos en el pilar de confianza de su ecosistema digital. Emitimos y gestionamos los certificados digitales (como 'pasaportes' o 'credenciales' electrónicas) que validan la identidad de sus empleados, clientes, servidores y aplicaciones.",
+      "Esto es fundamental para:",
+      "• Asegurar comunicaciones web (SSL/TLS)",
+      "• Permitir firmas digitales con validez legal",
+      "• Controlar accesos a sistemas críticos"
+    ],
+    icon: `<svg width=\"32\" height=\"32\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"#2b8dcc\" d=\"M12 2a7 7 0 0 1 7 7v2.09a7.001 7.001 0 0 1-2.5 13.41A7.001 7.001 0 0 1 5 11.09V9a7 7 0 0 1 7-7Zm0 2a5 5 0 0 0-5 5v2.09a5.001 5.001 0 0 0 1.79 9.59A5.001 5.001 0 0 0 17 11.09V9a5 5 0 0 0-5-5Z\"/></svg>`
+  },
+  {
+    title: "Autoridad de Registro (RA)",
+    description: [
+      "Autoridad de Registro (RA): Verificación Rigurosa para Certificados Seguros",
+      "La Autoridad de Registro es el 'control de calidad' antes de emitir un certificado. Verificamos meticulosamente la identidad de cada solicitante (persona o dispositivo) y administramos todo el ciclo de vida de sus certificados: desde la solicitud inicial, pasando por renovaciones, hasta su eventual suspensión o revocación. Garantizamos que solo las entidades legítimas reciban certificados válidos",
+      
+    ],
+    icon: null // Aquí puedes luego usar un componente Astro
+  },
+  {
+    title: "Autoridad de Validación (VA) ",
+    description: [
+      "Autoridad de Validación (VA): Confirme la Validez de Certificados en Tiempo Real",
+      "¿Necesita saber al instante si un certificado digital es aún confiable? Nuestra Autoridad de Validación (utilizando protocolos como OCSP) proporciona respuestas inmediatas sobre el estado de un certificado (válido, revocado o expirado). Esto es crucial para tomar decisiones de seguridad al momento, por ejemplo, antes de autorizar una transacción o permitir un acceso"
+    ],
+    icon: `<svg width=\"32\" height=\"32\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"#2b8dcc\" d=\"M17 3a1 1 0 0 1 1 1v2h1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1V4a1 1 0 0 1 1-1h10Zm-1 2H8v1h8V5Zm2 3H5v10h14V8Zm-7 2a1 1 0 0 1 1 1v2h2a1 1 0 1 1 0 2h-2v2a1 1 0 1 1-2 0v-2H8a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1Z\"/></svg>`
+  },
+  {
+    title: "Autoridad de Sellado de Tiempo (TSA)",
+    description: [
+      "Autoridad de Sellado de Tiempo (TSA): Evidencia Legal del Cuándo y el Qué",
+      "El Sellado de Tiempo actúa como un 'notario digital', proporcionando una marca de tiempo precisa y legalmente vinculante que certifica el momento exacto en que un documento fue firmado o una transacción ocurrió. Esta evidencia criptográfica es fundamental para el no repudio y la validez a largo plazo de sus registros electrónicos."
+    ],
+    icon: `<svg width=\"32\" height=\"32\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"#2b8dcc\" d=\"M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm1 14.93V17a1 1 0 1 1-2 0v-.07A8.001 8.001 0 0 1 4.07 13H7a1 1 0 1 1 0 2H4.07A8.001 8.001 0 0 1 11 19.93V17a1 1 0 1 1 2 0v2.93A8.001 8.001 0 0 1 19.93 15H17a1 1 0 1 1 0-2h2.93A8.001 8.001 0 0 1 13 4.07V7a1 1 0 1 1-2 0V4.07A8.001 8.001 0 0 1 4.07 11H7a1 1 0 1 1 0 2H4.07A8.001 8.001 0 0 1 13 19.93Z\"/></svg>`
+  },
+  {
+    title: "Software de Firma Digital",
+    description: [
+      "Software de Firma Digital: Digitalice y Asegure sus Flujos Documentales",
+      "Transforme la manera en que su organización maneja los documentos. Nuestras soluciones de software de firma digital le permiten firmar, enviar y gestionar documentos electrónicamente con total seguridad y validez legal. Integramos estas herramientas de forma fluida en sus procesos existentes, reduciendo costos, agilizando aprobaciones y eliminando el papel."
+    ],
+    icon: `<svg width=\"32\" height=\"32\" fill=\"none\" viewBox=\"0 0 24 24\"><path fill=\"#2b8dcc\" d=\"M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm-1 14.93V17a1 1 0 1 0 2 0v-.07A8.001 8.001 0 0 0 19.93 13H17a1 1 0 1 0 0 2h2.93A8.001 8.001 0 0 0 13 19.93V17a1 1 0 1 0-2 0v2.93A8.001 8.001 0 0 0 4.07 15H7a1 1 0 1 0 0-2H4.07A8.001 8.001 0 0 0 11 4.07V7a1 1 0 1 0 2 0V4.07A8.001 8.001 0 0 0 19.93 11H17a1 1 0 1 0 0 2h2.93A8.001 8.001 0 0 0 13 19.93Z\"/></svg>`
+  }
+];
+---
+
+<section class="pt-16 md:pt-24 pb-12 bg-[#f8f9fa] min-h-screen flex flex-col items-center justify-center mt-10">
+  <div class="container px-4 md:px-6 mx-auto">
+    <div class="flex flex-col items-center justify-center text-center mb-12">
+      <h1 class="text-3xl md:text-5xl font-bold text-[#112f59] mb-4">Consultoría y Soluciones PKI</h1>
+      <p class="max-w-2xl text-gray-700 md:text-xl leading-relaxed">
+        En General System SAS, no solo implementamos PKI, sino que creamos un ecosistema de confianza donde cada interacción digital es auténtica, íntegra y segura.
+      </p>
+    </div>
+
+    <div class="mx-auto w-full max-w-6xl mb-16 px-2 md:px-0">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {pkiPoints.map((point, idx) => (
+            <div class={`bento-card group flex flex-col items-start justify-between bg-white rounded-3xl shadow-xl border border-[#e3eaf3] p-6 md:p-8 transition-transform hover:-translate-y-1 hover:shadow-2xl hover:border-[#2b8dcc] ${idx === pkiPoints.length - 1 ? 'md:col-span-2' : ''}`}>
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="rounded-2xl bg-[#2b8dcc]/10 p-4 md:p-5 flex items-center justify-center shadow-sm" style="min-width:64px; min-height:64px;">
+                        {point.icon ? (
+                            <Fragment set:html={point.icon} />
+                        ) : (
+                            null
+                        )}
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-[#112f59] leading-tight">{point.title}</h3>
+                </div>
+                <div class="text-gray-700 md:text-lg text-base leading-relaxed w-full">
+                    {Array.isArray(point.description)
+                        ? (
+                            <>
+                                {point.description.map((line, i) =>
+                                    line.startsWith('•')
+                                        ? <div class="pl-4 flex items-start mb-1"><span class="text-[#2b8dcc] mr-2 mt-0.5">•</span><span>{line.replace('•', '').trim()}</span></div>
+                                        : <p class={i === point.description.length - 1 ? '' : 'mb-1'}>{line}</p>
+                                )}
+                            </>
+                            )
+                        : <p>{point.description}</p>
+                    }
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
+
+    <!-- Casos de Uso / Aplicaciones por Sector -->
+    <div class="w-full max-w-4xl mx-auto mb-16">
+      <div class="bg-gradient-to-br from-[#e9f6ff] to-[#f8f9fa] rounded-3xl shadow-lg border border-[#e3eaf3] p-8 md:p-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#2b8dcc] mb-6 text-center">Casos de Uso / Aplicaciones por Sector</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text-[#112f59] text-lg mb-1 flex items-center"><span class="inline-block w-2 h-2 rounded-full bg-[#2b8dcc] mr-2"></span>Sector Financiero</h3>
+            <ul class="list-disc list-inside text-gray-700 text-base md:text-lg">
+              <li>Transacciones seguras</li>
+              <li>Banca en línea</li>
+              <li>Cumplimiento normativo</li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text-[#112f59] text-lg mb-1 flex items-center"><span class="inline-block w-2 h-2 rounded-full bg-[#2b8dcc] mr-2"></span>Gobierno</h3>
+            <ul class="list-disc list-inside text-gray-700 text-base md:text-lg">
+              <li>Identificación ciudadana</li>
+              <li>Firma de trámites</li>
+              <li>Voto electrónico</li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text-[#112f59] text-lg mb-1 flex items-center"><span class="inline-block w-2 h-2 rounded-full bg-[#2b8dcc] mr-2"></span>Salud</h3>
+            <ul class="list-disc list-inside text-gray-700 text-base md:text-lg">
+              <li>Protección de historias clínicas</li>
+              <li>Recetas electrónicas</li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-semibold text-[#112f59] text-lg mb-1 flex items-center"><span class="inline-block w-2 h-2 rounded-full bg-[#2b8dcc] mr-2"></span>Empresas</h3>
+            <ul class="list-disc list-inside text-gray-700 text-base md:text-lg">
+              <li>Comunicaciones seguras</li>
+              <li>Protección de propiedad intelectual</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-12">
+      <img src="/image/PortlfirmaDigital.jpg" alt="PKI Firma Digital" class="rounded-2xl shadow-xl max-w-full h-auto w-[400px] md:w-[600px] border-4 border-[#e3eaf3]" loading="lazy" />
+    </div>
+
+    <!-- Call to Action -->
+    <div class="flex justify-center mt-8">
+      <a href="https://wa.me/51935289770?text=Hola%2C%20me%20interesa%20implementar%20soluciones%20PKI%20en%20mi%20organizacion.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F." target="_blank" rel="noopener noreferrer" class="inline-block bg-[#2b8dcc] hover:bg-[#2179b3] text-white font-semibold text-lg md:text-xl px-8 py-4 rounded-xl shadow-lg transition-all duration-300">
+        ¡Solicite una asesoría personalizada!
+      </a>
+    </div>
+  </div>
+<style>
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .bento-card.bento-span-2 {
+      grid-column: span 2 / span 2;
+    }
+  }
+  @media (min-width: 1200px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .bento-card.bento-span-2 {
+      grid-column: span 2 / span 2;
+    }
+  }
+</style>
+</section>
