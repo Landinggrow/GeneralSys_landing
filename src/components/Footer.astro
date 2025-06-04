@@ -1,7 +1,5 @@
 ---
-
 const year = new Date().getFullYear();
-
 
 const footerLinks = [
   { name: "Inicio", link: "/" },
@@ -12,67 +10,129 @@ const footerLinks = [
 ];
 
 import IconPhone from "./icon/IconPhone.astro";
-import IconMail from "./icon/IconMail.astro"
-import IconMapPoint from "./icon/IconMapPoint.astro"
+import IconMail from "./icon/IconMail.astro";
+import IconMapPoint from "./icon/IconMapPoint.astro";
 ---
 
-<footer class="bg-[#112f59] border-t border-gray-200 py-12">
-  <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
-
-<div class="flex flex-col gap-2">
-      <div class="flex items-center gap-2">
-        <div class="rounded-full bg-white p-2 flex items-center justify-center">
-          <img
-            src="/image/logotipoGS.png"
-            alt="General System Logo"
-            width="55"
-            height="55"
-            class="rounded-full"
-          />
+<footer class="bg-[#112f59] border-t border-gray-200 pt-12 pb-6">
+  <div class="container mx-auto px-4 md:px-6">
+    <div
+      class="flex flex-col md:flex-row md:justify-between md:items-start gap-10"
+    >
+      <!-- Logo y descripción -->
+      <div
+        class="flex flex-col items-center md:items-start gap-4 md:gap-2 mb-8 md:mb-0"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="rounded-full bg-white p-2 flex items-center justify-center shadow"
+          >
+            <img
+              src="/image/logotipoGS.png"
+              alt="General System Logo"
+              width="55"
+              height="55"
+              class="rounded-full"
+            />
+          </div>
+          <span
+            class="text-2xl md:text-3xl font-bold text-white whitespace-nowrap"
+            >General System</span
+          >
         </div>
-        <span class="text-3xl font-bold text-white">General System</span>
+        <p
+          class="text-sm text-gray-300 font-medium text-center md:text-left max-w-xs"
+        >
+          Soluciones de software a medida para impulsar tu negocio.
+        </p>
+        <div class="flex gap-3 mt-2">
+          {
+            footerLinks.map((link) => (
+              <a
+                href={link.link}
+                class="text-white/80 hover:text-white text-sm font-medium transition-colors duration-200"
+              >
+                {link.name}
+              </a>
+            ))
+          }
+        </div>
       </div>
-      <p class="text-sm text-gray-300 font-medium">
-        Soluciones de software a medida para impulsar tu negocio.
-      </p>
+
+      <!-- Centro de ayuda y contacto -->
+      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div>
+          <h6 class="font-bold text-white mb-4">Centro de ayuda</h6>
+          <ul class="text-gray-500 space-y-2">
+            <li class="text-white/80">Asistencia en linea:</li>
+            <li class="flex items-center gap-2 text-white/80">
+              <IconPhone />
+              <span class="truncate">+51 935 289 770</span>
+            </li>
+            <li class="text-white/80">Correo de contacto:</li>
+            <li class="flex items-center gap-2 text-white/80">
+              <IconMail />
+              <span class="truncate">generalsystemsas@gmail.com</span>
+            </li>
+            <li
+              class="text-white font-bold mt-2 flex flex-col items-start gap-2"
+            >
+              Libro de Reclamaciones
+              <a
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd4-5vG3dnoBw_Bue6ZS0WblWtcHKQye2p3wPn0YaaKNKjLAQ/viewform"
+                class="focus:outline-none focus:ring-2 focus:ring-[#2b8dcc] rounded-md"
+                title="Libro de Reclamaciones"
+              >
+                <div
+                  class="w-25 h-19 flex justify-center items-center bg-white rounded-md shadow hover:scale-105 transition-transform"
+                >
+                  <img
+                    src="/image/IconBookClaims.svg"
+                    class="w-23"
+                    alt="Logo de Libro de Reclamaciones"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="font-bold text-white mb-4">Contacto</h6>
+          <ul class="space-y-2 text-white/80">
+            <li class="flex items-center gap-2">
+              <IconMapPoint />
+              <span>Dirección de la empresa:</span>
+            </li>
+            <li class="pl-7 text-sm">
+              JR. DÁMASO DAGNINO NRO. 270 DPTO. 805<br />
+              LIMA - LIMA - JESUS MARIA
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-
-    <div class="flex flex-col md:flex-row gap-8 mt-8 md:mt-0">
-      <div>
-        <h6 class="font-bold text-white mb-4">Sobre Nosotros</h6>
-        <ul class="text-gray-500">
-          <li><a href="/politica-de-privacidad" class="underline text-white/80 hover:text-white/90">Política de privacidad</a></li>
-          <li><a href="/terminos-y-condiciones" class="underline text-white/80 hover:text-white/90">Términos y condiciones</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h6 class="font-bold text-white mb-4 ">Centro de ayuda</h6>
-        <ul class="text-gray-500">
-          <li class="text-white/80">Asistencia en linea:</li>
-          <li class="flex items-center gap-2 text-white/80"><IconPhone />+51 935 289 770</li>
-          <li class="text-white/80">Correo de contacto:</li>
-          <li class="flex items-center gap-2 text-white/80"><IconMail />generalsystemsas@gmail.com</li>
-          <li class="text-white/80">Libro de Reclamaciones</li>
-          <a href="">
-          <div class="w-25 h-20 flex justify-center items-center bg-white rounded-md shadow mt-2"><img src="/image/IconBookClaims.svg" class="w-23" alt="Logo de Scale"></div>
-          </a>
-        </ul>
-      </div>
-
-       <div>
-        <h6 class="font-bold text-white mb-4">Contacto</h6>
-        <ul class="text-white/80">
-          <li class="flex items-center"><IconMapPoint />Dirección de la empresa:</li>
-          <li>Tupac Yupanqui 143 Amarilis Huánuco Peru</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
-  <div class=" flex justify-center mt-5 pt-10 border-t-2 border-[#112f59]">
-   <p class="p-4 text-sm text-white/80">© {year} General System. Todos los derechos reservados.</p>
-   </div>
+  <div class="container mx-auto px-4 md:px-6">
+    <div
+      class="flex flex-col sm:flex-row justify-center sm:justify-between items-center mt-10 pt-6 border-t border-[#2b8dcc]"
+    >
+      <p class="text-xs text-white/60 text-center">
+        © {year} General System. Todos los derechos reservados.
+      </p>
+      <div class="flex gap-3 mt-3 sm:mt-0">
+        <a
+          href="/terminos-y-condiciones"
+          class="text-white/80 hover:text-[#2b8dcc] transition-colors text-xs"
+          >Términos y condiciones</a
+        >
+        <a
+          href="/politica-de-privacidad"
+          class="text-white/80 hover:text-[#2b8dcc] transition-colors text-xs"
+          >Política de privacidad</a
+        >
+      </div>
+    </div>
+  </div>
 </footer>
-
